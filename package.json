@@ -1,0 +1,25 @@
+{
+  "name": "bloodline",
+  "version": "1.0.0",
+  "description": "a family tree creator for looking into family history, and genetically inherited diseases",
+  "keywords": [
+    "bloodline",
+    "family",
+    "lineage"
+  ],
+  "homepage": "https://github.com/pratiknator44/bloodline#readme",
+  "bugs": {
+    "url": "https://github.com/pratiknator44/bloodline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratiknator44/bloodline.git"
+  },
+  "license": "ISC",
+  "author": "pratik",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
