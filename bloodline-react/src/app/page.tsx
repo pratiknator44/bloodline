@@ -1,66 +1,81 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { Container, Row, Col, Button, Navbar, Nav } from "react-bootstrap";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Navbar bg="dark" variant="dark" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">Bloodline</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#features">Features</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      <main>
+        <div className="bg-light py-5 mb-4 border-bottom">
+          <Container className="py-5">
+            <Row className="align-items-center">
+              <Col lg={7}>
+                <h1 className="display-4 fw-bold mb-4">Welcome to Bloodline</h1>
+                <p className="lead mb-4">
+                  A modern platform for creating and exploring family histories, lineage,
+                  and understanding genetically inherited traits and diseases.
+                </p>
+                <div className="d-grid gap-3 d-md-flex justify-content-md-start">
+                  <Button variant="primary" size="lg" className="px-4">
+                    Get Started
+                  </Button>
+                  <Button variant="outline-secondary" size="lg" className="px-4">
+                    Learn More
+                  </Button>
+                </div>
+              </Col>
+              <Col lg={5} className="d-none d-lg-block">
+                <div className="bg-secondary bg-opacity-10 p-5 rounded-3 text-center">
+                  <span className="display-1 text-muted">🌳</span>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        <Container className="py-5">
+          <Row className="g-4">
+            <Col md={4}>
+              <div className="p-4 border rounded-3 h-100">
+                <h3>Family Tree</h3>
+                <p>Visualize your ancestry with an interactive family tree creator.</p>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="p-4 border rounded-3 h-100">
+                <h3>Genetic History</h3>
+                <p>Track genetically inherited diseases and traits through generations.</p>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="p-4 border rounded-3 h-100">
+                <h3>Collaboration</h3>
+                <p>Invite family members to contribute and share historical findings.</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </main>
-    </div>
+
+      <footer className="py-4 mt-5 bg-dark text-light border-top">
+        <Container className="text-center">
+          <p className="mb-0">&copy; 2026 Bloodline Project. All rights reserved.</p>
+        </Container>
+      </footer>
+    </>
   );
 }
